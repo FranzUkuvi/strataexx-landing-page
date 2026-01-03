@@ -51,10 +51,13 @@
     --slate-light: 210 20% 70%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 25% 98%) 0%, hsl(210 30% 95%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(174 40% 95%) 0%, hsl(210 30% 98%) 50%, hsl(210 25% 96%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(174 70% 35%) 0%, hsl(174 60% 45%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(215 60% 20%) 0%, hsl(215 50% 30%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(215 60% 18%) 0%, hsl(174 50% 25%) 100%);
+    --gradient-navy-glow: linear-gradient(135deg, hsl(215 55% 22%) 0%, hsl(180 40% 28%) 50%, hsl(174 45% 32%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 99%) 100%);
+    --gradient-section-alt: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(174 25% 96%) 50%, hsl(210 30% 98%) 100%);
+    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(174 40% 90% / 0.5) 0%, transparent 60%);
 
     /* Shadows */
     --shadow-sm: 0 2px 8px -2px hsl(215 60% 20% / 0.08);
@@ -149,11 +152,61 @@
     background: var(--gradient-navy);
   }
 
+  .gradient-navy-glow {
+    background: var(--gradient-navy-glow);
+  }
+
   .gradient-card {
     background: var(--gradient-card);
   }
 
+  .gradient-section-alt {
+    background: var(--gradient-section-alt);
+  }
+
   .shadow-accent {
     box-shadow: var(--shadow-accent);
+  }
+
+  /* Mesh gradient overlay */
+  .bg-mesh {
+    position: relative;
+  }
+  
+  .bg-mesh::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-mesh);
+    pointer-events: none;
+  }
+
+  /* Subtle geometric pattern */
+  .bg-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(174 50% 35% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(215 60% 20% / 0.03) 0%, transparent 50%);
+  }
+
+  /* City silhouette for hero */
+  .city-silhouette {
+    position: relative;
+  }
+
+  .city-silhouette::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: 
+      linear-gradient(to top, hsl(210 30% 95% / 0.8) 0%, transparent 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath fill='%23cbd5e1' fill-opacity='0.15' d='M0 200 L0 180 L30 180 L30 150 L50 150 L50 180 L80 180 L80 120 L100 120 L100 100 L120 100 L120 120 L140 120 L140 180 L170 180 L170 140 L190 140 L190 160 L210 160 L210 180 L240 180 L240 90 L260 90 L260 70 L280 70 L280 90 L300 90 L300 180 L330 180 L330 130 L350 130 L350 150 L370 150 L370 180 L400 180 L400 60 L420 60 L420 40 L440 40 L440 60 L460 60 L460 180 L490 180 L490 110 L510 110 L510 130 L530 130 L530 180 L560 180 L560 80 L580 80 L580 100 L600 100 L600 180 L630 180 L630 50 L650 50 L650 30 L670 30 L670 50 L690 50 L690 180 L720 180 L720 140 L740 140 L740 120 L760 120 L760 140 L780 140 L780 180 L810 180 L810 70 L830 70 L830 90 L850 90 L850 180 L880 180 L880 100 L900 100 L900 80 L920 80 L920 100 L940 100 L940 180 L970 180 L970 130 L990 130 L990 150 L1010 150 L1010 180 L1040 180 L1040 60 L1060 60 L1060 40 L1080 40 L1080 60 L1100 60 L1100 180 L1130 180 L1130 110 L1150 110 L1150 90 L1170 90 L1170 110 L1190 110 L1190 180 L1200 180 L1200 200 Z'/%3E%3C/svg%3E");
+    background-size: 100% auto, 100% 100%;
+    background-position: bottom, bottom;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.6;
   }
 }

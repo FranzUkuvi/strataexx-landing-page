@@ -3,11 +3,15 @@ import { ArrowRight, Zap, Shield, Target } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden gradient-hero city-silhouette">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+        {/* Mesh gradient overlay */}
+        <div className="absolute inset-0 bg-mesh" />
+        {/* Floating orbs */}
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-primary/6 rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-accent/5 to-transparent rounded-full blur-[60px]" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24 relative z-10">

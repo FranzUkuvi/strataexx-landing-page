@@ -14,8 +14,13 @@ const Differentiator = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 gradient-hero">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-24 lg:py-32 gradient-section-alt relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-accent/3 rounded-full blur-[120px]" />
+        <div className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[100px]" />
+      </div>
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-semibold mb-4">Nuestra forma de pensar</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">

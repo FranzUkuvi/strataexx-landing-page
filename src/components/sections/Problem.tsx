@@ -25,8 +25,11 @@ const Problem = () => {
   ];
 
   return (
-    <section id="problema" className="py-24 lg:py-32 bg-card">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="problema" className="py-24 lg:py-32 bg-card relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-pattern opacity-50" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-semibold mb-4">El problema (nombrado sin rodeos)</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">

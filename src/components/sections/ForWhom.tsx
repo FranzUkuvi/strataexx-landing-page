@@ -16,8 +16,10 @@ const ForWhom = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-card">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-24 lg:py-32 gradient-section-alt relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-pattern" />
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-semibold mb-4">Para empresas que ya saben dónde les duele</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">
