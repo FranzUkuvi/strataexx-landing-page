@@ -30,8 +30,13 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section id="como-trabajamos" className="py-24 lg:py-32 bg-card">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="como-trabajamos" className="py-24 lg:py-32 bg-card relative overflow-hidden">
+      {/* Subtle mesh overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/3 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-primary/3 to-transparent" />
+      </div>
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-semibold mb-4">Cómo trabajamos</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">
