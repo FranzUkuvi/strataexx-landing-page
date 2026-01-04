@@ -62,14 +62,6 @@ const Problem = () => {
           </p>
         </div>
 
-        {/* Transition image between Problem and Differentiator */}
-        <div className="mt-16 flex justify-center">
-          <img 
-            src={tangleToOrder} 
-            alt="" 
-            className="w-[500px] lg:w-[700px] xl:w-[800px] h-auto opacity-[0.15] object-contain"
-          />
-        </div>
       </div>
     </section>
   );
