@@ -38,7 +38,7 @@ const Header = () => {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-lg border border-border hover:border-accent text-muted-foreground hover:text-accent transition-all duration-200"
+              className="flex items-center justify-center h-10 px-4 rounded-md border border-border hover:border-accent text-muted-foreground hover:text-accent transition-all duration-200"
               aria-label="WhatsApp"
             >
               <svg
