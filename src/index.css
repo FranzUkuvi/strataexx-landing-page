@@ -7,112 +7,139 @@
 
 @layer base {
   :root {
-    /* Navy & Turquoise palette extracted from Strataexx logo */
-    --background: 210 25% 98%;
-    --foreground: 215 50% 15%;
+    /* STRATAEXX Design System - Enterprise B2B palette */
+    /* Core colors from brand: #002848 (Navy), #206088 (Teal-Steel) */
+    
+    /* Background: #FAFBFC */
+    --background: 210 20% 98%;
+    /* Text: #0F1720 */
+    --foreground: 215 35% 9%;
 
+    /* Surface: #FFFFFF */
     --card: 0 0% 100%;
-    --card-foreground: 215 50% 15%;
+    --card-foreground: 215 35% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 50% 15%;
+    --popover-foreground: 215 35% 9%;
 
-    /* Navy primary - from logo */
-    --primary: 215 60% 20%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Navy: #002848 */
+    --primary: 205 100% 14%;
+    --primary-foreground: 0 0% 100%;
+    /* Primary Hover: #00223D */
+    --primary-hover: 205 100% 12%;
 
-    /* Light blue-gray secondary */
-    --secondary: 210 30% 95%;
-    --secondary-foreground: 215 50% 20%;
+    /* Secondary Teal-Steel: #206088 */
+    --secondary: 204 62% 33%;
+    --secondary-foreground: 0 0% 100%;
+    /* Secondary Hover: #184866 */
+    --secondary-hover: 204 62% 25%;
 
-    --muted: 210 20% 94%;
-    --muted-foreground: 215 20% 45%;
+    /* Muted text: #5B6775 */
+    --muted: 210 15% 96%;
+    --muted-foreground: 212 12% 41%;
 
-    /* Turquoise accent - from logo */
-    --accent: 174 70% 35%;
+    /* Accent (same as secondary for CTAs) */
+    --accent: 204 62% 33%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 90%;
-    --input: 210 25% 90%;
-    --ring: 174 70% 35%;
+    /* Border: #E6EBF0 */
+    --border: 210 25% 92%;
+    --input: 210 25% 92%;
+    --ring: 204 62% 33%;
 
     --radius: 0.625rem;
 
-    /* Custom Strataexx tokens */
-    --navy: 215 60% 20%;
-    --navy-light: 215 50% 30%;
-    --turquoise: 174 70% 35%;
-    --turquoise-light: 174 60% 45%;
-    --turquoise-dark: 174 75% 28%;
-    --slate: 215 20% 45%;
-    --slate-light: 210 20% 70%;
+    /* Custom STRATAEXX tokens */
+    /* Navy: #002848 */
+    --navy: 205 100% 14%;
+    /* Navy Hover: #00223D */
+    --navy-dark: 205 100% 12%;
+    /* Charcoal: #383838 */
+    --charcoal: 0 0% 22%;
+    
+    /* Teal-Steel: #206088 */
+    --teal: 204 62% 33%;
+    /* Teal Hover: #184866 */
+    --teal-dark: 204 62% 25%;
+    
+    /* Tints */
+    /* Navy tint 15%: #264863 */
+    --navy-tint-15: 205 44% 27%;
+    /* Teal tint 15%: #41789A */
+    --teal-tint-15: 204 42% 43%;
+    /* Teal tint 30%: #6390AC */
+    --teal-tint-30: 204 32% 53%;
+    /* Navy tint 50%: #8094A4 */
+    --navy-tint-50: 207 18% 58%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, hsl(174 40% 95%) 0%, hsl(210 30% 98%) 50%, hsl(210 25% 96%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(174 70% 35%) 0%, hsl(174 60% 45%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(215 60% 18%) 0%, hsl(174 50% 25%) 100%);
-    --gradient-navy-glow: linear-gradient(135deg, hsl(215 55% 22%) 0%, hsl(180 40% 28%) 50%, hsl(174 45% 32%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 99%) 100%);
-    --gradient-section-alt: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(174 25% 96%) 50%, hsl(210 30% 98%) 100%);
-    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(174 40% 90% / 0.5) 0%, transparent 60%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(210 25% 97%) 50%, hsl(204 30% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--teal-tint-15)) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-tint-15)) 100%);
+    --gradient-navy-glow: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--teal-dark)) 50%, hsl(var(--teal)) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 99%) 100%);
+    --gradient-section-alt: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(204 20% 97%) 50%, hsl(210 20% 98%) 100%);
+    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(204 40% 90% / 0.4) 0%, transparent 60%);
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(215 60% 20% / 0.08);
-    --shadow-md: 0 8px 24px -8px hsl(215 60% 20% / 0.12);
-    --shadow-lg: 0 16px 48px -12px hsl(215 60% 20% / 0.16);
-    --shadow-accent: 0 8px 32px -8px hsl(174 70% 35% / 0.35);
+    --shadow-sm: 0 2px 8px -2px hsl(205 100% 14% / 0.06);
+    --shadow-md: 0 8px 24px -8px hsl(205 100% 14% / 0.10);
+    --shadow-lg: 0 16px 48px -12px hsl(205 100% 14% / 0.14);
+    --shadow-accent: 0 8px 32px -8px hsl(204 62% 33% / 0.30);
 
     /* Sidebar defaults */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-foreground: 215 35% 9%;
+    --sidebar-primary: 205 100% 14%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 204 62% 33%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 25% 92%;
+    --sidebar-ring: 204 62% 33%;
   }
 
   .dark {
-    --background: 215 50% 8%;
-    --foreground: 210 40% 95%;
+    --background: 205 50% 6%;
+    --foreground: 210 20% 95%;
 
-    --card: 215 45% 12%;
-    --card-foreground: 210 40% 95%;
+    --card: 205 45% 10%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 215 45% 12%;
-    --popover-foreground: 210 40% 95%;
+    --popover: 205 45% 10%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 174 70% 45%;
-    --primary-foreground: 215 50% 10%;
+    --primary: 204 62% 45%;
+    --primary-foreground: 205 100% 8%;
+    --primary-hover: 204 62% 50%;
 
-    --secondary: 215 40% 18%;
-    --secondary-foreground: 210 40% 95%;
+    --secondary: 205 40% 18%;
+    --secondary-foreground: 210 20% 95%;
+    --secondary-hover: 205 40% 22%;
 
-    --muted: 215 35% 20%;
-    --muted-foreground: 215 20% 60%;
+    --muted: 205 35% 15%;
+    --muted-foreground: 210 15% 60%;
 
-    --accent: 174 60% 50%;
-    --accent-foreground: 215 50% 10%;
+    --accent: 204 55% 50%;
+    --accent-foreground: 205 100% 8%;
 
-    --destructive: 0 62.8% 45%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 215 35% 22%;
-    --input: 215 35% 22%;
-    --ring: 174 60% 50%;
+    --border: 205 35% 18%;
+    --input: 205 35% 18%;
+    --ring: 204 55% 50%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 205 50% 6%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 204 62% 45%;
+    --sidebar-primary-foreground: 205 100% 8%;
+    --sidebar-accent: 205 40% 18%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 205 35% 18%;
+    --sidebar-ring: 204 55% 50%;
   }
 }
 
