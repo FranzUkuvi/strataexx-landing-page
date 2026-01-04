@@ -16,7 +16,7 @@ const Nosotros = () => {
             src={nosotrosHeroOverlay}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-contain object-right opacity-[0.08] grayscale pointer-events-none"
+            className="absolute inset-0 w-full h-full object-contain object-right opacity-[0.30] grayscale pointer-events-none"
             style={{
               maskImage: 'radial-gradient(ellipse 80% 90% at 85% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)',
               WebkitMaskImage: 'radial-gradient(ellipse 80% 90% at 85% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)'
