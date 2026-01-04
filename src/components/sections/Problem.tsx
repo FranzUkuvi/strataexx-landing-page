@@ -1,4 +1,5 @@
 import { AlertCircle, Clock, DollarSign, Ban } from "lucide-react";
+import tangleToOrder from "@/assets/tangle-to-order.png";
 
 const Problem = () => {
   const problems = [
@@ -59,6 +60,15 @@ const Problem = () => {
           <p className="text-lg text-foreground">
             Muchas empresas se quedan <strong>años</strong> así. No por falta de visión, sino por falta de <span className="text-accent font-semibold">una forma pragmática de avanzar</span>.
           </p>
+        </div>
+
+        {/* Transition image between Problem and Differentiator */}
+        <div className="mt-16 flex justify-center">
+          <img 
+            src={tangleToOrder} 
+            alt="" 
+            className="w-[500px] lg:w-[700px] xl:w-[800px] h-auto opacity-[0.15] object-contain"
+          />
         </div>
       </div>
     </section>
