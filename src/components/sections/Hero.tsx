@@ -16,12 +16,19 @@ const Hero = () => {
         animationDelay: '2s'
       }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-accent/5 to-transparent rounded-full blur-[60px]" />
+        
+        {/* Chaos-to-clarity background image */}
+        <img 
+          src={chaosToClarityImage} 
+          alt="" 
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[700px] xl:w-[800px] opacity-[0.12] pointer-events-none"
+        />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-4xl">
           {/* Content */}
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p style={{
             animationDelay: "0.1s"
           }} className="text-accent font-semibold mb-4 animate-fade-in text-lg">
@@ -35,7 +42,7 @@ const Hero = () => {
               <span className="block text-accent mt-2">Strataexx los resuelve.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 animate-fade-in" style={{
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 animate-fade-in max-w-2xl" style={{
             animationDelay: "0.3s"
           }}>
               Trabajamos con dueños y directivos para convertir limitantes reales del negocio en soluciones concretas, rápidamente y sin reemplazar tu operación actual.
@@ -72,22 +79,12 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="relative hidden lg:block animate-fade-in" style={{
+          {/* Floating badge */}
+          <div className="absolute top-32 right-8 lg:right-16 hidden lg:block animate-fade-in" style={{
           animationDelay: "0.6s"
         }}>
-            <div className="relative flex items-center justify-center">
-              {/* Main illustration */}
-              <img 
-                src={chaosToClarityImage} 
-                alt="De la complejidad a la claridad" 
-                className="w-full max-w-md opacity-90"
-              />
-
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-accent text-sm font-semibold animate-float">
-                Sin burocracia
-              </div>
+            <div className="bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-accent text-sm font-semibold animate-float">
+              Sin burocracia
             </div>
           </div>
         </div>
