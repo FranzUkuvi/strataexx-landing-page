@@ -11,15 +11,24 @@ const Nosotros = () => {
         {/* Hero Section - Editorial Style */}
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden gradient-hero">
           <div className="absolute inset-0 bg-mesh" />
-          {/* Hero overlay image - fades into background via radial mask */}
+          {/* Hero overlay image - fades into background via composite mask */}
           <img
             src={nosotrosHeroOverlay}
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-contain object-right opacity-[0.30] grayscale pointer-events-none"
             style={{
-              maskImage: 'radial-gradient(ellipse 80% 90% at 85% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)',
-              WebkitMaskImage: 'radial-gradient(ellipse 80% 90% at 85% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)'
+              maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 70%), radial-gradient(ellipse 90% 80% at 80% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 90%)',
+              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 70%), radial-gradient(ellipse 90% 80% at 80% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 90%)',
+              maskComposite: 'intersect',
+              WebkitMaskComposite: 'source-in'
+            }}
+          />
+          {/* Tone bridge overlay - blends image tones with hero gradient */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background) / 0.7) 25%, hsl(var(--background) / 0.3) 45%, transparent 65%)'
             }}
           />
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
