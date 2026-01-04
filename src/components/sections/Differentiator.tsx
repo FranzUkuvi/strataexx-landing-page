@@ -1,5 +1,6 @@
 import { Check, X, Zap } from "lucide-react";
 import tangleToOrder from "@/assets/tangle-to-order.png";
+import networkWaves from "@/assets/network-waves.png";
 
 const Differentiator = () => {
   const whatWeDoNot = [
@@ -25,6 +26,13 @@ const Differentiator = () => {
           alt=""
           aria-hidden="true"
           className="pointer-events-none select-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[38%] w-[520px] lg:w-[720px] xl:w-[860px] h-auto opacity-[0.07] object-contain"
+        />
+        {/* Network waves overlay - monochrome & faded */}
+        <img
+          src={networkWaves}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute right-0 bottom-0 translate-y-[20%] w-[600px] lg:w-[900px] xl:w-[1100px] h-auto opacity-[0.06] object-contain grayscale"
         />
       </div>
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
