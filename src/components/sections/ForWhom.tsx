@@ -1,4 +1,5 @@
 import { Check, X } from "lucide-react";
+import networkWaves from "@/assets/network-waves.png";
 
 const ForWhom = () => {
   const forUs = [
@@ -19,6 +20,15 @@ const ForWhom = () => {
     <section className="py-24 lg:py-32 gradient-section-alt relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-pattern" />
+      {/* Network waves overlay - monochrome & faded, full width */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <img
+          src={networkWaves}
+          alt=""
+          aria-hidden="true"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-w-[1400px] h-auto opacity-[0.08] object-cover grayscale"
+        />
+      </div>
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-semibold mb-4">Para empresas que ya saben dónde les duele</p>
