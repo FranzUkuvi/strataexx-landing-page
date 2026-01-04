@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Shield, Target } from "lucide-react";
+import chaosToClarityImage from "@/assets/chaos-to-clarity.png";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden gradient-hero city-silhouette">
       {/* Background decoration */}
@@ -75,15 +76,18 @@ const Hero = () => {
           <div className="relative hidden lg:block animate-fade-in" style={{
           animationDelay: "0.6s"
         }}>
-            <div className="relative">
-              {/* Main card */}
-              
+            <div className="relative flex items-center justify-center">
+              {/* Main illustration */}
+              <img 
+                src={chaosToClarityImage} 
+                alt="De la complejidad a la claridad" 
+                className="w-full max-w-md opacity-90"
+              />
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-accent text-sm font-semibold animate-float">
                 Sin burocracia
               </div>
-              
             </div>
           </div>
         </div>
