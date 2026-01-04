@@ -1,4 +1,5 @@
 import { Check, X, Zap } from "lucide-react";
+import tangleToOrder from "@/assets/tangle-to-order.png";
 
 const Differentiator = () => {
   const whatWeDoNot = [
@@ -19,6 +20,12 @@ const Differentiator = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-accent/3 rounded-full blur-[120px]" />
         <div className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[100px]" />
+        <img
+          src={tangleToOrder}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[38%] w-[520px] lg:w-[720px] xl:w-[860px] h-auto opacity-[0.07] object-contain"
+        />
       </div>
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
