@@ -58,15 +58,15 @@ const Hero = () => {
           }}>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Zap className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">15-45 días a MVP</span>
+                <span className="font-medium text-lg">15-45 días a MVP</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Shield className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">Sin reemplazar sistemas</span>
+                <span className="font-medium text-lg">Sin reemplazar sistemas</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Target className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">Impacto medible</span>
+                <span className="font-medium text-lg">Impacto medible</span>
               </div>
             </div>
           </div>
