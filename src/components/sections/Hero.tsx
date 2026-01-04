@@ -53,9 +53,9 @@ const Hero = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap gap-6 animate-fade-in" style={{
+            <div style={{
             animationDelay: "0.5s"
-          }}>
+          }} className="flex flex-wrap gap-6 animate-fade-in border-2">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Zap className="w-5 h-5 text-accent" />
                 <span className="font-medium text-lg">15-45 días a MVP</span>
