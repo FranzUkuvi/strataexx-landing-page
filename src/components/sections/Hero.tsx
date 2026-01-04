@@ -83,9 +83,7 @@ const Hero = () => {
               <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-accent text-sm font-semibold animate-float">
                 Sin burocracia
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-card border border-border/50 px-4 py-2 rounded-xl shadow-md text-sm font-medium">
-                ✓ Ejecutamos, no vendemos humo
-              </div>
+              
             </div>
           </div>
         </div>
