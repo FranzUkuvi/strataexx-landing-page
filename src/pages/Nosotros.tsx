@@ -11,14 +11,17 @@ const Nosotros = () => {
         {/* Hero Section - Editorial Style */}
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden gradient-hero">
           <div className="absolute inset-0 bg-mesh" />
-          {/* Hero overlay image - blends into background */}
+          {/* Hero overlay image - fades into background via mask */}
           <img
             src={nosotrosHeroOverlay}
             alt=""
             aria-hidden="true"
-            className="absolute top-0 right-0 h-full w-auto max-w-[70%] object-contain object-right-top opacity-[0.18] grayscale pointer-events-none"
+            className="absolute inset-0 w-full h-full object-contain object-right opacity-[0.12] grayscale pointer-events-none"
+            style={{
+              maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 70%)',
+              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 70%)'
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent pointer-events-none" />
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl">
               <p className="text-accent font-semibold mb-4 animate-fade-in">
