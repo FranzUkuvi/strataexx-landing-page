@@ -21,9 +21,9 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="max-w-2xl">
-            <p className="text-accent font-semibold mb-4 animate-fade-in" style={{
+            <p style={{
             animationDelay: "0.1s"
-          }}>
+          }} className="text-accent font-semibold mb-4 animate-fade-in text-lg">
               Soluciones de negocio apalancadas en software
             </p>
             
