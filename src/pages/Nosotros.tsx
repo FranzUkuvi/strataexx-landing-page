@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import networkWaves from "@/assets/network-waves.png";
+import nosotrosHeroOverlay from "@/assets/nosotros-hero-overlay.jpg";
 
 const Nosotros = () => {
   return (
@@ -10,6 +11,16 @@ const Nosotros = () => {
         {/* Hero Section - Editorial Style */}
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden gradient-hero">
           <div className="absolute inset-0 bg-mesh" />
+          {/* Hero overlay image - right side */}
+          <div className="absolute inset-y-0 right-0 w-3/5 lg:w-1/2 overflow-hidden pointer-events-none">
+            <img
+              src={nosotrosHeroOverlay}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover opacity-[0.12] grayscale"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+          </div>
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl">
               <p className="text-accent font-semibold mb-4 animate-fade-in">
