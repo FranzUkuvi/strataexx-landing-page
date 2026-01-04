@@ -32,19 +32,19 @@ const Header = () => {
               </a>)}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-6">
             <a
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors duration-200"
+              className="flex items-center justify-center w-10 h-10 rounded-lg border border-border hover:border-accent text-muted-foreground hover:text-accent transition-all duration-200"
               aria-label="WhatsApp"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
