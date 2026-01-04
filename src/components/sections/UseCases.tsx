@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, Eye, Users, Calculator, TrendingUp, Link } from "lucide-react";
+import tangleScrawl from "@/assets/tangle-scrawl.png";
 
 interface UseCase {
   icon: React.ElementType;
@@ -57,8 +58,17 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="casos-uso" className="py-24 lg:py-32 gradient-hero">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="casos-uso" className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
+      {/* Background overlay image */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <img
+          src={tangleScrawl}
+          alt=""
+          aria-hidden="true"
+          className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[35%] w-[600px] lg:w-[900px] xl:w-[1100px] h-auto opacity-[0.06] object-contain"
+        />
+      </div>
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-accent font-semibold mb-4">Qué tipo de problemas resolvemos</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">
