@@ -11,15 +11,15 @@ const Nosotros = () => {
         {/* Hero Section - Editorial Style */}
         <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden gradient-hero">
           <div className="absolute inset-0 bg-mesh" />
-          {/* Hero overlay image - fades into background via mask */}
+          {/* Hero overlay image - fades into background via radial mask */}
           <img
             src={nosotrosHeroOverlay}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-contain object-right opacity-[0.12] grayscale pointer-events-none"
+            className="absolute inset-0 w-full h-full object-contain object-right opacity-[0.08] grayscale pointer-events-none"
             style={{
-              maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 70%)',
-              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 70%)'
+              maskImage: 'radial-gradient(ellipse 80% 90% at 85% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)',
+              WebkitMaskImage: 'radial-gradient(ellipse 80% 90% at 85% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)'
             }}
           />
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
